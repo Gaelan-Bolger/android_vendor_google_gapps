@@ -6,114 +6,42 @@
 
 list_files() {
 cat <<EOF
-app/Books.apk
-app/CalendarGoogle.apk
-app/CalendarGoogle.odex
-app/ChromeBookmarksSyncAdapter.apk
-app/CloudPrint2.apk
-app/Drive.apk
-app/GenieWidget.apk
-app/GenieWidget.odex
-app/Gmail2.apk
-app/Gmail2.odex
-app/GoogleContactsSyncAdapter.apk
-app/GoogleContactsSyncAdapter.odex
-app/GoogleEars.apk
-app/GoogleEars.odex
-app/GoogleEarth.apk
-app/GoogleHome.apk
-app/GoogleTTS.apk
-app/GoogleTTS.odex
-app/Hangouts.apk
-app/Keep.apk
-app/Keep.odex
-app/LatinImeGoogle.apk
-app/LatinImeGoogle.odex
-app/Magazines.apk
-app/Maps.apk
-app/MediaUploader.apk
-app/MediaUploader.odex
-app/Music2.apk
-app/PlayGames.apk
-app/PlusOne.apk
-app/QuickOffice.apk
-app/Street.apk
-app/Videos.apk
-app/YouTube.apk
-etc/g.prop
+app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
+etc/permissions/com.google.android.camera2.xml
+etc/permissions/com.google.android.dialer.support.xml
 etc/permissions/com.google.android.maps.xml
 etc/permissions/com.google.android.media.effects.xml
 etc/permissions/com.google.widevine.software.drm.xml
-etc/permissions/features.xml
 etc/preferred-apps/google.xml
+framework/com.google.android.camera2.jar
+framework/com.google.android.dialer.support.jar
 framework/com.google.android.maps.jar
-framework/com.google.android.maps.odex
 framework/com.google.android.media.effects.jar
-framework/com.google.android.media.effects.odex
 framework/com.google.widevine.software.drm.jar
-framework/com.google.widevine.software.drm.odex
-lib/libAppDataSearch.so
-lib/libdocscanner_image-v7a.so
-lib/libdocsimageutils.so
-lib/libearthandroid.so
-lib/libearthmobile.so
-lib/libfacetracker.so
-lib/libfilterframework_jni.so
-lib/libfilterpack_facedetect.so
-lib/libfrsdk.so
-lib/libgames_rtmp_jni.so
-lib/libgoogle_recognizer_jni_l.so
 lib/libjni_latinime.so
-lib/libjni_latinimegoogle.so
-lib/libjni_t13n_shared_engine.so
-lib/liblinearalloc.so
-lib/libmoviemaker-jni.so
-lib/libndk1.so
-lib/libnetjni.so
-lib/libocrclient.so
-lib/libpatts_engine_jni_api.so
-lib/libplus_jni_v8.so
-lib/librectifier-v7a.so
-lib/librs.antblur.so
-lib/librs.antblur_constant.so
-lib/librs.antblur_drama.so
-lib/librs.drama.so
-lib/librs.film_base.so
-lib/librs.fixedframe.so
-lib/librs.grey.so
-lib/librs.image_wrapper.so
-lib/librs.retrolux.so
-lib/librsjni.so
-lib/libRSSupport.so
-lib/libspeexwrapper.so
-lib/libvcdecoder_jni.so
-lib/libvideochat_jni.so
-lib/libvorbisencoder.so
-lib/libwebp_android.so
-lib/libwebrtc_audio_coding.so
-lib/libwebrtc_audio_preprocessing.so
-lib/libWVphoneAPI.so
-priv-app/CalendarProvider.apk
-priv-app/CalendarProvider.odex
-priv-app/GoogleBackupTransport.apk
-priv-app/GoogleBackupTransport.odex
-priv-app/GoogleFeedback.apk
-priv-app/GoogleFeedback.odex
-priv-app/GoogleLoginService.apk
-priv-app/GoogleLoginService.odex
-priv-app/GooglePartnerSetup.apk
-priv-app/GooglePartnerSetup.odex
-priv-app/GoogleServicesFramework.apk
-priv-app/GoogleServicesFramework.odex
-priv-app/OneTimeInitializer.apk
-priv-app/OneTimeInitializer.odex
-priv-app/Phonesky.apk
-priv-app/PrebuiltGmsCore.apk
+priv-app/GoogleBackupTransport/GoogleBackupTransport.apk
+priv-app/GoogleFeedback/GoogleFeedback.apk
+priv-app/GoogleLoginService/GoogleLoginService.apk
+priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk
+priv-app/GooglePartnerSetup/GooglePartnerSetup.apk
+priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
+priv-app/Phonesky/Phonesky.apk
+priv-app/PrebuiltGmsCore/lib/arm/libAppDataSearch.so
+priv-app/PrebuiltGmsCore/lib/arm/libconscrypt_gmscore_jni.so
+priv-app/PrebuiltGmsCore/lib/arm/libgames_rtmp_jni.so
+priv-app/PrebuiltGmsCore/lib/arm/libgcastv2_base.so
+priv-app/PrebuiltGmsCore/lib/arm/libgcastv2_support.so
+priv-app/PrebuiltGmsCore/lib/arm/libgmscore.so
+priv-app/PrebuiltGmsCore/lib/arm/libgms-ocrclient.so
+priv-app/PrebuiltGmsCore/lib/arm/libjgcastservice.so
+priv-app/PrebuiltGmsCore/lib/arm/libsslwrapper_jni.so
+priv-app/PrebuiltGmsCore/lib/arm/libWhisper.so
+priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
 priv-app/SetupWizard.apk
-priv-app/SetupWizard.odex
-priv-app/talkback.apk
-priv-app/Velvet.apk
-priv-app/Wallet.apk
+priv-app/Velvet/lib/arm/libgoogle_hotword_jni.so
+priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so
+priv-app/Velvet/lib/arm/libvcdecoder_jni.so
+priv-app/Velvet/Velvet.apk
 usr/srec/en-US/c_fst
 usr/srec/en-US/clg
 usr/srec/en-US/commands.abnf
@@ -169,54 +97,25 @@ case "$1" in
     # Stub
   ;;
   post-restore)
-    # Remove the Pico TTS app
-    rm -f /system/app/PicoTts.apk
-
-    # Remove the AOSP Stock Launcher after restore
-    rm -f /system/priv-app/Launcher2.apk
-    rm -f /system/priv-app/Launcher3.apk
-    rm -f /system/app/Launcher2.apk
-    rm -f /system/app/Launcher3.apk
-
-    # Remove the AOSP Keyboard after restore - NOT on Mini Builds
-    rm -f /system/app/LatinIME.apk
-
-    # Remove pieces from other GApps or ROM's (from updater-script)
-    rm -f /system/app/BrowserProviderProxy.apk
-    rm -f /system/app/Calendar.apk
-    rm -f /system/app/Gmail.apk
-    rm -f /system/app/GmsCore.apk
-    rm -f /system/app/GoogleCalendar.apk
-    rm -f /system/app/GoogleCalendarSyncAdapter.apk
-    rm -f /system/app/GoogleCloudPrint.apk
-    rm -f /system/app/GoogleHangouts.apk
-    rm -f /system/app/GoogleKeep.apk
-    rm -f /system/app/GoogleOneTimeInitializer.apk
-    rm -f /system/app/GooglePlus.apk
-    rm -f /system/app/PartnerBookmarksProvider.apk
-    rm -f /system/app/QuickSearchBox.apk
-    rm -f /system/app/Talk.apk
-    rm -f /system/app/Vending.apk
-    rm -f /system/app/Youtube.apk
-    rm -f /system/priv-app/Calendar.apk
-    rm -f /system/priv-app/GmsCore.apk
-    rm -f /system/priv-app/GoogleNow.apk
-    rm -f /system/priv-app/QuickSearchBox.apk
-    rm -f /system/priv-app/Vending.apk
-
-    # Remove apps from 'app' that need to be installed in 'priv-app' (from updater-script)
-    rm -f /system/app/CalendarProvider.apk
-    rm -f /system/app/GoogleBackupTransport.apk
-    rm -f /system/app/GoogleFeedback.apk
-    rm -f /system/app/GoogleLoginService.apk
-    rm -f /system/app/GooglePartnerSetup.apk
-    rm -f /system/app/GoogleServicesFramework.apk
-    rm -f /system/app/OneTimeInitializer.apk
-    rm -f /system/app/Phonesky.apk
-    rm -f /system/app/PrebuiltGmsCore.apk
-    rm -f /system/app/SetupWizard.apk
-    rm -f /system/app/talkback.apk
-    rm -f /system/app/Velvet.apk
-    rm -f /system/app/Wallet.apk
-;;
+   rm -rf /system/app/BrowserProviderProxy
+   rm -f /system/app/BrowserProviderProxy.apk
+   rm -rf /system/app/PartnerBookmarksProvider
+   rm -f /system/app/PartnerBookmarksProvider.apk
+   rm -rf /system/app/Provision
+   rm -f /system/app/Provision.apk
+   rm -rf /system/app/QuickSearchBox
+   rm -f /system/app/QuickSearchBox.apk
+   rm -rf /system/app/Vending
+   rm -f /system/app/Vending.apk
+   rm -rf /system/priv-app/BrowserProviderProxy
+   rm -f /system/priv-app/BrowserProviderProxy.apk
+   rm -rf /system/priv-app/PartnerBookmarksProvider
+   rm -f /system/priv-app/PartnerBookmarksProvider.apk
+   rm -rf /system/priv-app/Provision
+   rm -f /system/priv-app/Provision.apk
+   rm -rf /system/priv-app/QuickSearchBox
+   rm -f /system/priv-app/QuickSearchBox.apk
+   rm -rf /system/priv-app/Vending
+   rm -f /system/priv-app/Vending.apk
+  ;;
 esac
